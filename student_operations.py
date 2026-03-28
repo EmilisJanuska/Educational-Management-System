@@ -5,7 +5,7 @@ from exceptions import InvalidIDException, DuplicateIDException
 https://www.youtube.com/watch?v=5ChEesH3KYA
 '''
 
-def validate_student(id: str, students: list) -> None: #duplicate check needed!
+def validate_student(id: str, students: list) -> None:
     if not isinstance(id, str) or not id.strip(): 
         raise InvalidIDException(message='ID must be a non-empty string.', value=101)
         
@@ -13,18 +13,15 @@ def validate_student(id: str, students: list) -> None: #duplicate check needed!
         if student["ID"] == id:
             raise DuplicateIDException(message='ID must be a unique non-empty string.', value=102)
             
-    else:
-        return
-        
         
 def add_student() -> None:
     students: list = load_data()
     while True:
         print('ENTER STUDENTS DETAILS CAREFULLY.')
         
-        id: str = input('ID: ')
+        student_id: str = input('ID: ')
         try:
-            validate_student(id, students)
+            validate_student(student_id, students)
         except(InvalidIDException, DuplicateIDException) as e:
             print(e)
             continue
@@ -48,7 +45,7 @@ def add_student() -> None:
         else:
             print('Details not confirmed.')
         
-def view_students() -> None:
+def view_students() -> None: #prints the raw dict -> try make it UI friendly
     students = load_data()
     if students:
         for student in students:
@@ -57,7 +54,7 @@ def view_students() -> None:
         print('Found no students.')
         
         
-def update_student() -> None: #ID will be immutable, users's can delete student and create new for new id.
+def update_student() -> None: #ID is  immutable.
     students = load_data()
     student_id = input("Enter Student ID to update: ")
     print('To keep original information leave blank.')                  # !!!!!!!!!!!!!!!NEED TO IMPLEMENT THIS!!!!
