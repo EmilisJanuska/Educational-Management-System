@@ -2,7 +2,8 @@ from storage import load_data, save_data
 from exceptions import InvalidIDException, DuplicateIDException
 
 '''
-https://www.youtube.com/watch?v=5ChEesH3KYA
+Student operations such as adding, viewing, updating, and deleting student records.
+Interacts with storage for data persistence and uses custom exceptions for error handling.
 '''
 
 def validate_student(id: str, students: list) -> None:
@@ -38,7 +39,7 @@ def add_student() -> None:
         confirmation = input('Confrim details are correct (Y/N): ').upper()
         
         if confirmation == 'Y':
-            students.append({"ID": id, "Course": course, "Minor": minor, "Year": year})
+            students.append({"ID": student_id, "Course": course, "Minor": minor, "Year": year})
             save_data(students)
             print('Student added successfully!')
             return

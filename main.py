@@ -2,6 +2,11 @@ import student_operations
 import sys
 import os
 
+'''
+Main menu for the Educational Management System.
+Provides options to view, add, update, and delete student records.
+'''
+
 def main() -> None:
     while True:
         print('\n-----Main Menu-----')
@@ -38,7 +43,7 @@ def main() -> None:
                 print(f'\nTry again. {user_choice} is not an option ...')
                 
                             
-        except TypeError:
+        except (TypeError, ValueError):
             print('Select options from 1-5 only ...')
             
         

@@ -1,6 +1,9 @@
 from typing import Any
 
-
+'''
+Custom exceptions for handling specific error cases in the application,
+such as invalid IDs or duplicate entries.
+'''
 class InvalidIDException(Exception):
     def __init__(self, message: str, value: Any) -> None:
         super().__init__(message)
