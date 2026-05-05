@@ -58,7 +58,6 @@ def view_students() -> None: #prints the raw dict -> try make it UI friendly
 def update_student() -> None: #ID is  immutable.
     students = load_data()
     student_id = input("Enter Student ID to update: ")
-    print('To keep original information leave blank.')                  # !!!!!!!!!!!!!!!NEED TO IMPLEMENT THIS!!!!
     for student in students:
         if student["ID"] == student_id:
             student["Course"] = input('Enter new course: ')
