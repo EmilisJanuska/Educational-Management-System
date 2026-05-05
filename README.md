@@ -4,16 +4,27 @@ EMS system to manage student records: add student , remove student, updates stud
 The data is stored in a CSV file for permenant storage.
 
 # HOW TO INSTALL
-Download .ZIP or git clone the repo
-Download requirments (first time making it sorry for the extenstions if you are forced to download them)
-You can now run main and view the jupyer notebook for data analysis
+
+METHOD 1
+
+1. Download .ZIP
+2. pip install -r requirements.txt
+   You can now run main and view the jupyter notebook for data analysis
+
+METHOD 2 (if method 1 doesn't work)
+
+CLONE THE REPOSITORY( it is public should be no issues)
+
+1. git clone https://github.com/EmilisJanuska/Educational-Management-System.git
+2. pip install -r requirements.txt
 
 # How to use
 
-Run main.py for interaction menu from there you will see the CLI UI
-ALL DATA ANALYSIS IS IN THE JUPYPTER NOTEBOOK YOU MAY NEED THE VS EXTENSTION TO ACCESS
+Run main.py for the EMS interaction menu
+ALL DATA ANALYSIS IS IN THE JUPYPTER NOTEBOOK CALLED data_analysis.ipynb
 
-## Requirments (again)
+## Requirments and dependencies list in requirments.txt but here they are again
+
 See requirments.txt
 asttokens==3.0.1
 colorama==0.4.6
@@ -56,4 +67,5 @@ tzdata==2026.2
 wcwidth==0.7.0
 
 ## Author
+
 Emilis Januska
